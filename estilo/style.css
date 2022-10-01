@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    /* GRADIENTE */
+    --cor01: #010125;
+    --cor02: #245cbb;
+    --cor03: #a373c6;
+}
+
+body {
+    background: linear-gradient(to right, #010125 35%, #245cbb 90%, #a373c6);
+}
+
+label, input {
+    display: block;
+}
+
+header {
+    background: #ffffff;
+    height: 150px;
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.conteiner {
+    display: flex;
+}
