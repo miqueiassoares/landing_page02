@@ -8,6 +8,11 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+::selection {
+    background-color: #a373c6;
+    color: #ccc;
+}
+
 :root {
     /* GRADIENTE */
     --cor01: #010125;
@@ -16,21 +21,112 @@
 }
 
 body {
-    background: linear-gradient(to right, #010125 35%, #245cbb 90%, #a373c6);
+    background: linear-gradient(100deg, #010125 35%, #245cbb 90%, #a373c6);
+    background-repeat: none;
+    background-attachment: fixed;
+    color: white;
+    
 }
 
-label, input {
+input {
     display: block;
+    border-radius: 20px;
+    border: 0;
+    height: 30px;
+    width: 100%;
+    padding: 5px;
+}
+
+
+input:hover {
+    background: #000;
+    color: white;
+}
+
+label::after {
+    content: '*';
 }
 
 header {
-    background: #ffffff;
+    background: linear-gradient(290deg, var(--cor03) -16%, var(--cor02) 55%);
     height: 150px;
     width: 90%;
     max-width: 1100px;
     margin: auto;
+    padding: 30px;
 }
 
-.conteiner {
+header h1 {
+    font-size: 3rem;
+    text-decoration: underline;
+    color: chartreuse;
+    text-align: center;
+    
+}
+
+header p {
+    text-align: center;
+}
+
+
+.container {
     display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 70px;
+}
+
+
+form, main {
+    width: 450px;
+    height: 65vh;
+    padding: 20px;
+}
+
+main h1 {
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+
+main h2 {
+    font-size: 1.3rem;
+    margin: 15px 0px;
+    font-weight: bolder;
+}
+
+main p {
+    font-size: .96rem;
+}
+
+form h1 {
+    font-size: 1.1rem;
+    text-align: center; 
+    margin: 0px 0px 50px 0px;
+}
+
+button {
+    width: 100%;
+    border: 0;
+    padding: 5px;
+    background-color: #ff7d24;
+    border-radius: 5px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+button input {
+    background: #ff7d24;
+    border-radius: 0;
+    width: 100%;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer; 
+}
+
+button>input:hover{
+    background-color: #ff7d24;
+}
+
+form{
+    line-height: 30px;
 }
